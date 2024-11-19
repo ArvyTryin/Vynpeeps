@@ -1,42 +1,41 @@
-{
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradasi biru yang menarik */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: #fff;
+    padding: 20px;
 }
 
 
-{
+.container {
     width: 100%;
-    max-width: 800px;
-    margin: 20px;
+    max-width: 900px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
     overflow: hidden;
+    padding: 20px;
 }
 
 
-{
+.embed-container {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-    box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
-    margin-top: 1.6em;
+    padding-top: 56.25%; /* Aspek rasio 16:9 */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Sudut melengkung */
+    overflow: hidden;
 }
-
 
 .embed-container iframe {
     position: absolute;
@@ -45,30 +44,55 @@ body {
     top: 0;
     left: 0;
     border: none;
-    padding: 0;
-    margin: 0;
 }
 
 
 .description {
-    padding: 15px;
-    font-size: 16px;
-    color: #333;
     text-align: center;
+    color: #333;
+}
+
+.description h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222; /* Warna teks yang lebih gelap untuk judul */
+}
+
+.description p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
 
 .description a {
     display: inline-block;
-    margin-top: 10px;
-    color: #1a73e8;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
 }
-
 
 .description a:hover {
-    text-decoration: underline;
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efek zoom saat hover */
 }
 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
