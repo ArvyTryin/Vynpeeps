@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradasi biru yang menarik */
+    background: linear-gradient(to right, #00c6ff, #0072ff); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ body {
     max-width: 900px;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
     overflow: hidden;
     padding: 20px;
 }
@@ -56,7 +56,7 @@ body {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #222; /* Warna teks yang lebih gelap untuk judul */
+    color: #222; 
 }
 
 .description p {
@@ -80,7 +80,7 @@ body {
 
 .description a:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Efek zoom saat hover */
+    transform: scale(1.05); 
 }
 
 
