@@ -1,22 +1,318 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Canva Embed Video</title>
-    <!-- Link ke file CSS eksternal -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Tabungan Ceria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f1fdf7, #d0f0e8);
+      color: #333;
+    }
+    nav {
+      background-color: #00b894;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .nav-brand {
+      font-family: 'Fredoka', sans-serif;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5em;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #dfe6e9;
+    }
+    .hero {
+      padding: 60px 20px;
+    }
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .logo {
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2.8em;
+      color: #00b894;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Fredoka', sans-serif;
+      color: #0984e3;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 900px;
+    }
+    .center-content {
+      text-align: center;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    .video-container iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: none;
+    }
+    .form-group {
+      margin-bottom: 1em;
+      text-align: left;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .preview-img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      border: 3px dashed #00b894;
+      padding: 10px;
+      border-radius: 12px;
+      background: #f9fff9;
+    }
+    button {
+      background-color: #00b894;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #019874;
+    }
+    #hasil {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #2d3436;
+    }
+    .colab-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .colab-link a {
+      background-color: #ffcb05;
+      color: #2d3436;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    .colab-link a:hover {
+      background-color: #ffe066;
+    }
+    footer {
+      background-color: #00b894;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="embed-container">
-            <iframe loading="lazy" src="https://www.canva.com/design/DAGWUFyZZxc/RoT3TY0jgtLD05bcFDkKjw/watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
-        </div>
-        <div class="description">
-            <p><strong>Introduction Video</strong> from <strong>GROUP 6</strong></p>
-            <a href="https://www.canva.com/design/DAGWUFyZZxc/RoT3TY0jgtLD05bcFDkKjw/watch?utm_content=DAGWUFyZZxc&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">Tonton Video di Canva</a>
-        </div>
+  <nav>
+    <div class="nav-left">
+      <img src="images/logo.png" alt="Logo Tabungan Ceria" class="nav-logo">
+      <span class="nav-brand">Tabungan Ceria</span>
     </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#process">Design Process</a>
+      <a href="#product">Product</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <img src="images/logo.png" alt="Logo Tabungan Ceria" class="logo">
+      <div class="hero-text">
+        <h1>Tabungan Ceria</h1>
+        <p>Tabungan Ceria adalah inisiatif edukatif untuk mengajarkan konsep menabung dengan cara menyenangkan, khususnya bagi anak-anak dan remaja.</p>
+        <p>Logo kami menampilkan karakter koin hijau yang tersenyum ceria dengan kacamata sebagai simbol kecerdasan, serta buku dan koin emas di atas kepalanya.</p>
+        <p>Kami percaya bahwa menabung adalah awal dari masa depan cerah—dimulai dari langkah kecil yang penuh semangat!</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="card center-content">
+      <div class="video-container">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGWUFyZZxc/RoT3TY0jgtLD05bcFDkKjw/watch?embed" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>Design Process</h2>
+    <div class="card center-content">
+      <div class="video-container">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGpv0B6-OA/YeRQh8UoMwadzSyOVf-AiQ/view?embed" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="product">
+    <h2><i class="fa-solid fa-piggy-bank"></i> TABUNGAN CERIA</h2>
+    <div class="card">
+      <div class="form-group">
+        <label><i class="fa-solid fa-image"></i> Upload Gambar Impian:</label>
+        <input type="file" accept="image/*" id="gambarInput">
+        <div class="preview-img" id="preview"></div>
+      </div>
+      <div class="form-group">
+        <label><i class="fa-solid fa-calendar-days"></i> Pilih Jangkauan Nabung:</label>
+        <select id="jangkauan">
+          <option value="hari">Harian</option>
+          <option value="minggu">Mingguan</option>
+          <option value="bulan">Bulanan</option>
+          <option value="tahun">Tahunan</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><i class="fa-solid fa-tags"></i> Harga Barang Impian (Rp):</label>
+        <input type="text" id="harga" inputmode="numeric">
+      </div>
+      <div class="form-group">
+        <label><i class="fa-solid fa-wallet"></i> Nominal Tabungan (Rp):</label>
+        <input type="text" id="nominal" inputmode="numeric">
+      </div>
+      <button onclick="hitungWaktu()"><i class="fa-solid fa-calculator"></i> Hitung Waktu Menabung</button>
+      <div id="hasil"></div>
+      <div class="colab-link">
+        <p><strong>perhitungan dalam Python?</strong></p>
+        <a href="https://colab.research.google.com/drive/17nQmPvFY3GdwiWCqguz6Rx4hhDmF2JXB?usp=sharing" target="_blank">
+          🔗 Buka di Google Colab
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Tabungan Ceria. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+        }
+      });
+    });
+    document.getElementById('gambarInput').addEventListener('change', function () {
+      const preview = document.getElementById('preview');
+      preview.innerHTML = '';
+      const file = this.files[0];
+      if (file) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.style.maxWidth = '100%';
+        img.style.borderRadius = '10px';
+        preview.appendChild(img);
+      }
+    });
+    function formatRupiah(angka) {
+      return angka.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+    document.getElementById('harga').addEventListener('input', function (e) {
+      const value = e.target.value.replace(/\./g, '');
+      e.target.value = formatRupiah(value);
+    });
+    document.getElementById('nominal').addEventListener('input', function (e) {
+      const value = e.target.value.replace(/\./g, '');
+      e.target.value = formatRupiah(value);
+    });
+    function hitungWaktu() {
+      const harga = parseFloat(document.getElementById('harga').value.replace(/\./g, ''));
+      const nominal = parseFloat(document.getElementById('nominal').value.replace(/\./g, ''));
+      const jangkauan = document.getElementById('jangkauan').value;
+      const hasil = document.getElementById('hasil');
+      if (isNaN(harga) || isNaN(nominal) || nominal <= 0) {
+        hasil.innerText = "Mohon isi data dengan benar.";
+        return;
+      }
+      const total = Math.ceil(harga / nominal);
+      hasil.innerHTML = `🎯 <strong>Kamu bisa meraih impianmu dalam sekitar ${total} ${jangkauan}!</strong> 💪✨<br> Yuk mulai nabung dari sekarang!`;
+    }
+  </script>
 </body>
 </html>
