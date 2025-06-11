@@ -111,7 +111,6 @@
   </section>
 
   <script>
-    // Preview gambar
     document.getElementById('gambarInput').addEventListener('change', function () {
       const preview = document.getElementById('preview');
       preview.innerHTML = '';
@@ -125,7 +124,6 @@
       }
     });
 
-    // Format angka ke rupiah
     function formatRupiah(angka) {
       return angka.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     }
@@ -140,7 +138,6 @@
       e.target.value = formatRupiah(value);
     });
 
-    // Hitung waktu
     function hitungWaktu() {
       const harga = parseFloat(document.getElementById('harga').value.replace(/\./g, ''));
       const nominal = parseFloat(document.getElementById('nominal').value.replace(/\./g, ''));
